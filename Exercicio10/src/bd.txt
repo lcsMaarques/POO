@@ -1,0 +1,15 @@
+package conexão;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+public class ConexaoBancoDados {
+    private static final String URL = "jdbc:mysql://localhost/pessoa"; // URL do banco de dados
+    private static final String USUARIO = "seu_usuario"; // Usuário do banco de dados
+    private static final String SENHA = "sua_senha"; // Senha do banco de dados
+
+    public static Connection obterConexao() throws SQLException {
+        return DriverManager.getConnection(URL, USUARIO, SENHA);
+    }
+}
